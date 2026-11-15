@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Ayu 🎀</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS -->
+    <div class="hearts" id="hearts"></div>
+
+
+    <!-- OPENING SCREEN -->
+    <section class="opening" id="opening">
+
+        <div class="opening-card">
+
+            <div class="bow">🎀</div>
+
+            <h1>Hey, Ayu!</h1>
+
+            <p>
+                Someone has prepared a little surprise
+                just for you.
+
+                <br>
+
+                Are you ready?
+                💗
+            </p>
+
+            <button class="main-btn" onclick="openWebsite()">
+                Open Your Surprise ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC BUTTON -->
+    <button class="music-btn"
+        id="musicBtn"
+        onclick="toggleMusic()">
+
+        ♫
+
+    </button>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container" id="mainContent">
+
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <span class="small-label">
+                ✨ A SPECIAL DAY FOR SOMEONE SPECIAL ✨
+            </span>
+
+            <h1>Happy Birthday!</h1>
+
+            <h2>Dear Ayu 💗</h2>
+
+            <p>
+                Today is all about you!
+
+                <br>
+
+                A little celebration for a wonderful friend.
+            </p>
+
+            <div class="hero-decoration">
+                🌷 🎂 🧸 🌷
+            </div>
+
+        </section>
+
+
+        <!-- BIRTHDAY LETTER -->
+        <section class="card">
+
+            <h2>♡ A Letter For You ♡</h2>
+
+            <p>
+
+                Happy birthday, Ayu! 💕
+
+                <br><br>
+
+                Semoga di hari spesial ini kamu selalu
+                dikelilingi kebahagiaan, cinta, dan hal-hal
+                baik yang membuatmu tersenyum.
+
+                <br><br>
+
+                aku harap, km jadi orang yang makin pinter 
+                dan lancar rejeki nya yaa, semoga hidupmu dikelilingi 
+                orang-orang baik terus ya ayy, kurangin julidnya.
+                semoga berjodoh dengan orang yang km cinta ya.
+
+                <br><br>
+
+                Terima kasih sudah menjadi sahabat yang
+                menyenangkan. Semoga semua impian dan
+                harapanmu satu per satu bisa terwujud.
+
+                <br><br>
+
+                Jangan pernah berhenti menjadi dirimu
+                sendiri. You deserve all the happiness
+                in this world! 🌸
+
+            </p>
+
+        </section>
+
+
+        <!-- PHOTO GALLERY -->
+        <section class="gallery-section">
+
+            <span class="gallery-label">
+                OUR LITTLE MEMORIES ♡
+            </span>
+
+            <h2>Sweet Memories 📸</h2>
+
+            <p class="gallery-subtitle">
+
+                Four pictures, countless beautiful memories.
+
+                <br>
+
+                So grateful to have you, bestie! 💗
+
+            </p>
+
+
+            <div class="gallery">
+
+
+                <!-- PHOTO 1 -->
+                <div class="polaroid">
+
+                    <img
+                        src="images/foto1.jpg"
+                        alt="Memory 1"
+                        onclick="showPhoto(this.src)">
+
+                    <p>My favorite person ♡</p>
+
+                </div>
+
+
+                <!-- PHOTO 2 -->
+                <div class="polaroid">
+
+                    <img
+                        src="images/foto2.jpg"
+                        alt="Memory 2"
+                        onclick="showPhoto(this.src)">
+
+                    <p>Happy little moments 🌷</p>
+
+                </div>
+
+
+                <!-- PHOTO 3 -->
+                <div class="polaroid">
+
+                    <img
+                        src="images/foto3.jpg"
+                        alt="Memory 3"
+                        onclick="showPhoto(this.src)">
+
+                    <p>Forever besties 💕</p>
+
+                </div>
+
+
+                <!-- PHOTO 4 -->
+                <div class="polaroid">
+
+                    <img
+                        src="images/foto4.jpg"
+                        alt="Memory 4"
+                        onclick="showPhoto(this.src)">
+
+                    <p>Memories to keep 🎀</p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- PHOTO POPUP -->
+        <div class="photo-popup"
+            id="photoPopup"
+            onclick="closePhoto()">
+
+            <span class="close-popup">
+                &times;
+            </span>
+
+            <img
+                id="popupImage"
+                src=""
+                alt="Our memory">
+
+        </div>
+
+
+        <!-- BIRTHDAY CAKE -->
+        <section class="card">
+
+            <h2>Make A Wish! 🎂</h2>
+
+            <div class="cake-area">
+
+                <div class="cake" id="cake">
+                    🎂
+                </div>
+
+                <p>
+                    Close your eyes, make a wish,
+                    and blow your imaginary candles!
+                </p>
+
+                <button class="wish-btn"
+                    onclick="makeWish()">
+
+                    ✨ Make a Wish ✨
+
+                </button>
+
+                <div id="wishMessage">
+
+                    Your wish is on its way! 💗
+
+                    <br>
+
+                    May all your dreams come true! 🌷
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SURPRISE GIFT -->
+        <section class="surprise-box">
+
+            <div class="gift"
+                id="gift"
+                onclick="openGift()">
+
+                🎁
+
+            </div>
+
+            <h2>A Little Surprise!</h2>
+
+            <p>
+
+                There's one more thing for you.
+
+                <br>
+
+                Tap the gift to open it! 💝
+
+            </p>
+
+
+            <div id="surpriseMessage">
+
+                <h2>Dear Bestie! 💌</h2>
+
+                <p>
+
+                    I hope this new chapter of your life
+                    brings you endless laughter, beautiful
+                    memories, and wonderful adventures.
+
+                    <br><br>
+
+                    No matter how busy life gets,
+                    I hope we always have time for
+                    silly conversations and unforgettable
+                    moments together.
+
+                    <br><br>
+
+                    Stay happy, stay healthy,
+                    and keep shining, Ayu!
+
+                    <br><br>
+
+                    Love you, bestie! 💗
+
+                </p>
+
+                <div class="gift-decoration">
+                    🌷 🧸 💕
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL MESSAGE -->
+        <section class="card">
+
+            <h2>One More Thing ♡</h2>
+
+            <p>
+
+                May your days be filled with sunshine,
+                your heart with peace, and your life
+                with beautiful surprises.
+
+                <br><br>
+
+                Keep smiling, Ayu.
+
+                The world is brighter with you in it! 🎀
+
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="heart-footer">
+                💗
+            </div>
+
+            Made with love, just for Ayu.
+
+            <br>
+
+            Happy Birthday! 🎂
+
+            <br>
+
+            <small>
+                © A Little Birthday Surprise
+            </small>
+
+        </footer>
+
+
+    </main>
+    
+<!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
